@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\RestController;
 use App\Http\Controllers\AuthenticatedSessionController;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\StampController;
@@ -26,5 +26,5 @@ Route::get('/register', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);
 Route::get('/stamp', [StampController::class, 'store']);
 Route::post('/stamp', [StampController::class, 'destroy']);
-Route::get('/attendance', [AttendanceController::class, 'index']);
-Route::post('/attendance', [AttendanceController::class, 'destroy']);
+Route::post('/stamp/index', [StampController::class, 'destroy']);
+Route::get('/stamp/index', [StampController::class, 'index']);

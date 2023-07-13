@@ -10,4 +10,9 @@ class StampController extends Controller
     {
         return view('stamp');
     }
+
+    public function index()
+    {
+        return view('attendance');
+    }
 }

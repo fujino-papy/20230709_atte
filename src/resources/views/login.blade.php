@@ -11,10 +11,10 @@
     <main>
         <h1>ログイン</h1>
         <div>
-            <input class="mail" type="email">
+            <input class="mail" type="email" placeholder="メールアドレス">
         </div>
         <div>
-            <input class="pass" type="password">
+            <input class="pass" type="password" placeholder="パスワード">
         </div>
         <div>
             <button class="login_button" type="submit">ログイン</button>
