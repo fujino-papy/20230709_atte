@@ -20,11 +20,14 @@ use App\Http\Controllers\StampController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', [AuthenticatedSessionController::class, 'store']);
-Route::post('/login', [AuthenticatedSessionController::class, 'destroy']);
 Route::get('/register', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);
-Route::get('/stamp', [StampController::class, 'store']);
-Route::post('/stamp', [StampController::class, 'destroy']);
-Route::post('/stamp/index', [StampController::class, 'destroy']);
-Route::get('/stamp/index', [StampController::class, 'index']);
+Route::get('/login', [AuthenticatedSessionController::class, 'store']);
+Route::post('/login', [AuthenticatedSessionController::class, 'destroy']);
+Route::get('/stamp/list', [StampController::class, 'list']);
+Route::post('/stamp/home', [StampController::class, 'home']);
+Route::get('/stamp/start', [StampController::class, 'startWork']);
+Route::post('/stamp/end', [StampController::class, 'endWork']);
+Route::post('/rest/start', [RestController::class, 'startRest']);
+Route::post('/rest/end', [RestController::class, 'endRest']);
+

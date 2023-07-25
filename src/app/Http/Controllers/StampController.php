@@ -11,8 +11,8 @@ class StampController extends Controller
         return view('stamp');
     }
 
-    public function index()
+    public function list()
     {
-        return view('attendance');
+        return view('list');
     }
 }
